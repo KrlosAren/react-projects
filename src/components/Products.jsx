@@ -13,10 +13,14 @@ const Products = () => {
   };
 
   return (
-    <div className='Products'>
-      <div className='Products-items'>
+    <div className="Products">
+      <div className="Products-items">
         {products.map((product) => (
-          <Product key={product.id} product={product} handleAddToCard={handleAddToCard} />
+          <Product
+            key={product.id}
+            product={product}
+            handleAddToCard={handleAddToCard}
+          />
         ))}
       </div>
     </div>
