@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:dev": "webpack serve --config webpack.config.js --mode development",
+    "start": "webpack serve --config webpack.config.js --mode development",
     "build:prod": "webpack --config webpack.config.js --mode production",
     "format": "prettier --write \"{*.js,src/**/*.{js,jsx}}\"",
     "lint": "eslint src/ --fix"
@@ -15,7 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -45,7 +46,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run format && npm run lint",
-      "pre-push": "npm test",
+      "pre-push": "npm run format && npm run lint",
       "...": "..."
     }
   }
