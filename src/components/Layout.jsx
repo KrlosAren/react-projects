@@ -9,7 +9,7 @@ import '../styles/components/Layout.css';
 
 const Layout = ({ children }) => {
   return (
-    <div className="Main">
+    <div className='Main'>
       <Header />
       {children}
       <Footer />
